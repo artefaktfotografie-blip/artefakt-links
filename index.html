@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Artefakt Fotografie · Marcello Keller</title>
+<meta name="description" content="Artefakt Fotografie, Marcello Keller. Business-Porträts, Personal Branding und Hochzeiten in Zürich, Luzern, Bern und Basel.">
+<meta property="og:title" content="Artefakt Fotografie · Marcello Keller">
+<meta property="og:description" content="Business-Porträts, Personal Branding und Hochzeiten in Zürich, Luzern, Bern und Basel.">
+<meta property="og:image" content="img/titelbild.jpg">
+<meta name="theme-color" content="#141414">
+<link rel="icon" href="img/portrait.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --tinte: #141414;
+    --papier: #F3F1EC;
+    --weiss: #FBFAF7;
+    --grau: #6E6A64;
+    --linie: #DCD7CE;
+    --bronze: #8A6A4A;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--papier); }
+  body {
+    color: var(--tinte);
+    font: 16px/1.55 "Inter", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .seite { max-width: 480px; margin: 0 auto; padding-bottom: 40px; }
+
+  /* Titelbild, läuft unten ins Papier aus. Ohne Bild bleibt ein dunkler Verlauf. */
+  .bild {
+    position: relative;
+    height: 58vh; min-height: 360px; max-height: 540px;
+    background:
+      url("img/titelbild.jpg") center top / cover no-repeat,
+      linear-gradient(160deg, #2b2a27, #0f0f0f);
+  }
+  .bild::after {
+    content: ""; position: absolute; inset: 0 0 -2px;
+    background: linear-gradient(to bottom, rgba(243,241,236,0) 60%, rgba(243,241,236,.8) 88%, var(--papier) 100%);
+  }
+  .portrait {
+    position: absolute; left: 50%; bottom: -44px; transform: translateX(-50%);
+    width: 96px; height: 96px; border-radius: 50%; z-index: 2;
+    border: 3px solid var(--papier);
+    background: url("img/portrait.jpg") center / cover no-repeat, var(--tinte);
+    display: grid; place-items: center;
+    color: var(--papier); font: 500 22px/1 "Cormorant Garamond", serif; letter-spacing: .08em;
+  }
+
+  .kopf { text-align: center; padding: 62px 24px 4px; }
+  h1 {
+    font: 400 44px/1 "Cormorant Garamond", Georgia, serif;
+    letter-spacing: .14em; text-transform: uppercase; padding-left: .14em;
+  }
+  .marke {
+    margin-top: 8px;
+    font: 500 11px/1 "Inter", sans-serif; letter-spacing: .42em; text-transform: uppercase;
+    color: var(--grau); padding-left: .42em;
+  }
+  .strich { width: 32px; height: 1px; background: var(--bronze); margin: 20px auto; }
+  .intro {
+    max-width: 330px; margin: 0 auto;
+    font: italic 400 21px/1.35 "Cormorant Garamond", Georgia, serif;
+  }
+  .fakten { margin-top: 12px; font-size: 13px; color: var(--grau); letter-spacing: .02em; }
+
+  .links { list-style: none; padding: 30px 20px 0; display: grid; gap: 10px; }
+  .links a {
+    display: flex; align-items: center; gap: 14px;
+    padding: 16px 18px; min-height: 64px;
+    background: var(--weiss); border: 1px solid var(--linie); border-radius: 4px;
+    color: var(--tinte); text-decoration: none;
+    transition: border-color .15s ease, transform .15s ease;
+  }
+  .links a:hover, .links a:focus-visible { border-color: var(--tinte); transform: translateY(-1px); outline: none; }
+  .links svg { flex: 0 0 20px; width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+  .links .text { display: flex; flex-direction: column; }
+  .links .titel { font: 500 15px/1.3 "Inter", sans-serif; }
+  .links .zusatz { font-size: 13px; color: var(--grau); }
+  .links .pfeil { margin-left: auto; color: var(--bronze); font-size: 18px; }
+
+  .links a.haupt { background: var(--tinte); border-color: var(--tinte); color: var(--papier); }
+  .links a.haupt .zusatz { color: #B9B4AC; }
+  .links a.haupt .pfeil { color: #C9AE8E; }
+  .links a.haupt:hover { border-color: var(--bronze); }
+
+  .gruss { text-align: center; padding: 36px 24px 0; }
+  .gruss p { font: italic 400 19px/1.4 "Cormorant Garamond", Georgia, serif; color: var(--grau); }
+  .gruss .name { margin-top: 4px; font: 400 26px/1 "Cormorant Garamond", Georgia, serif; color: var(--tinte); font-style: normal; }
+
+  footer { text-align: center; margin-top: 30px; font-size: 12px; color: var(--grau); letter-spacing: .04em; }
+  footer a { color: var(--grau); }
+
+  @media (prefers-reduced-motion: reduce) { .links a { transition: none; } }
+</style>
+</head>
+<body>
+<main class="seite">
+
+  <div class="bild" role="img" aria-label="Marcello Keller mit seiner Kamera">
+    <div class="portrait" role="img" aria-label="Portrait von Marcello Keller"></div>
+  </div>
+
+  <header class="kopf">
+    <h1>Artefakt</h1>
+    <p class="marke">Fotografie</p>
+    <div class="strich"></div>
+    <p class="intro">Porträts, die ruhig, klar und glaubwürdig wirken.</p>
+    <p class="fakten">Marcello Keller · Zürich, Luzern, Bern, Basel</p>
+  </header>
+
+  <ul class="links">
+    <li>
+      <a class="haupt" href="https://wa.me/41797012222?text=Hallo%20Marcello%2C%20ich%20interessiere%20mich%20f%C3%BCr%20ein%20Shooting%20am%20...%20in%20...%20Hast%20du%20Zeit%3F">
+        <svg viewBox="0 0 24 24"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.5-4.3A8.5 8.5 0 1 1 20.5 11.6z"/><path d="M9 8.6c.3 2.6 2.3 4.9 5 5.6"/></svg>
+        <span class="text"><span class="titel">Shooting anfragen</span><span class="zusatz">Direkt auf WhatsApp</span></span>
+        <span class="pfeil" aria-hidden="true">›</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://artefakt-fotografie.ch/business-portrait">
+        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5"/><circle cx="9" cy="10" r="1.6"/><path d="M3.5 17l5-4.5 3.5 3 3-2.5 5.5 4.5"/></svg>
+        <span class="text"><span class="titel">Business-Porträts</span><span class="zusatz">Beispiele und Ablauf</span></span>
+        <span class="pfeil" aria-hidden="true">›</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://artefakt-fotografie.ch">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.7 5.6 3.7 9s-1.2 6.4-3.7 9c-2.5-2.6-3.7-5.6-3.7-9S9.5 5.6 12 3z"/></svg>
+        <span class="text"><span class="titel">Website</span><span class="zusatz">Teams, Reportagen, Hochzeiten</span></span>
+        <span class="pfeil" aria-hidden="true">›</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/artefakt_fotografie">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6"/></svg>
+        <span class="text"><span class="titel">Instagram</span><span class="zusatz">@artefakt_fotografie</span></span>
+        <span class="pfeil" aria-hidden="true">›</span>
+      </a>
+    </li>
+    <li>
+      <a href="mailto:hello@artefakt-fotografie.ch?subject=Anfrage%20Shooting">
+        <svg viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="1.5"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>
+        <span class="text"><span class="titel">E-Mail</span><span class="zusatz">hello@artefakt-fotografie.ch</span></span>
+        <span class="pfeil" aria-hidden="true">›</span>
+      </a>
+    </li>
+  </ul>
+
+  <section class="gruss">
+    <p>Ich freue mich auf eure Anfrage.</p>
+    <p class="name">Marcello</p>
+  </section>
+
+  <footer>
+    <a href="https://artefakt-fotografie.ch">artefakt-fotografie.ch</a> · <a href="tel:+41797012222">+41 79 701 22 22</a>
+  </footer>
+
+</main>
+</body>
+</html>
